@@ -2,7 +2,7 @@
     "name": "coreproc/gcm",
     "description": "Google Cloud Messaging library for PHP",
     "require": {
-        "guzzlehttp/guzzle": "5.*"
+        "guzzlehttp/guzzle": "~6."
     },
     "license": "MIT",
     "authors": [

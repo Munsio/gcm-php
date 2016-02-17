@@ -43,7 +43,7 @@ class GcmClient
         $client = new Client();
 
         try {
-            $response = $client->post($this->gcmUrl, [
+            $response = $client->request('POST', $this->gcmUrl, [
                 'headers' => [
                     'Authorization' => 'key=' . $this->apiKey,
                     'Content-Type'  => 'application/json',
@@ -54,7 +54,7 @@ class GcmClient
             throw $e;
         }
 
-        return new Response($response->json());
+        return new Response(json_decode($response->getBody(), true));
     }
 
 }
